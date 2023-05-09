@@ -372,6 +372,10 @@ a:visited {
         margin-left: 0;
     }
 
+    .content .search-item i {
+        right: 5%;
+    }
+
     .sidebar.active ~ .content {
         width: calc(100% - 300px);
         margin-left: 300px;
@@ -383,10 +387,11 @@ a:visited {
         margin-bottom: 2rem;
     }
 
-    .content{
+    .content {
         margin: 0;
     }
-    .form button{
+
+    .form button {
         width: 50%;
     }
 
@@ -400,8 +405,4 @@ a:visited {
     .content .search-item i {
         right: 5%;
     }
-}
-
-#trash:hover{
-    color: #80a4e3;
 }
