@@ -9,6 +9,10 @@
     font-family: 'Source Serif Pro', serif;
 }
 
+body{
+    cursor: url(images/cursor.jpg) 0 0, pointer;
+}
+
 .main {
     background: conic-gradient(from -.5turn at bottom right, deeppink, cyan, rebeccapurple);
     height: 100vh;
