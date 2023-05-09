@@ -9,8 +9,8 @@
     font-family: 'Source Serif Pro', serif;
 }
 
-body{
-    cursor: url(images/cursor.jpg) 0 0, pointer;
+body {
+    cursor: url(images/cursor.jpg) 0 0, pointer !important;
 }
 
 .main {
@@ -41,11 +41,14 @@ body{
     position: fixed;
     left: 0;
     top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .sidebar .title {
     text-align: center;
-    margin: 2rem auto;
+    margin-bottom: 2rem;
     font-family: 'Caveat', cursive;
     font-size: 2rem;
 }
@@ -53,8 +56,10 @@ body{
 .sidebar .form {
     /*background: lightgreen;*/
     width: 95%;
-    margin: auto;
     padding: 1rem;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: space-between;*/
     /*box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),*/
     /*0.3em 0.3em 1em rgba(0, 0, 0, 0.3);*/
     /*border-radius: 3px;*/
@@ -122,35 +127,35 @@ body{
     /*border: 1px solid #111;*/
 }
 
-.content .property {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    /*background-color: white;*/
-    width: 100%;
-    margin: .9rem 0;
-}
+/*.content .property {*/
+/*    display: flex;*/
+/*    justify-content: space-around;*/
+/*    align-items: center;*/
+/*    !*background-color: white;*!*/
+/*    width: 100%;*/
+/*    margin: .9rem 0;*/
+/*}*/
 
-.content .property button {
-    cursor: pointer;
-    outline: 0;
-    border: 1px solid #a6a6a6;
-    padding: .5rem 1rem;
-    width: 120px;
-    font-size: 1rem;
-    font-weight: 600;
-    background-color: #fff;
-    color: #444;
-    border-radius: 3px;
-    transition: ease-in-out .8s;
-}
+/*.content .property button {*/
+/*    cursor: pointer;*/
+/*    outline: 0;*/
+/*    border: 1px solid #a6a6a6;*/
+/*    padding: .5rem 1rem;*/
+/*    width: 120px;*/
+/*    font-size: 1rem;*/
+/*    font-weight: 600;*/
+/*    background-color: #fff;*/
+/*    color: #444;*/
+/*    border-radius: 3px;*/
+/*    transition: ease-in-out .8s;*/
+/*}*/
 
-.content .property button:hover {
-    color: white;
-    border: 1px solid rgba(197, 195, 195, 0.99);
-    background: none;
+/*.content .property button:hover {*/
+/*    color: white;*/
+/*    border: 2px solid #91b3f1;*/
+/*    background: none;*/
 
-}
+/*}*/
 
 .content .search-item {
     position: relative;
@@ -160,7 +165,7 @@ body{
 
 .content .search-item input {
     width: 100%;
-    padding: .5rem .5rem .5rem 1.9rem;
+    padding: .5rem;
     outline: none;
     border: 1px solid lightgray;
     border-radius: 3px;
@@ -169,45 +174,61 @@ body{
     color: #111111;
 }
 
+input:focus {
+    box-shadow: 0 0 5px #80a4e3;
+    border: 2px solid #91b3f1;
+}
+
 .content .search-item input::placeholder {
     color: rgba(17, 17, 17, 0.87);
     font-weight: 600;
-    padding: 3px;
 }
 
 
 .content .search-item input:hover {
     background: none;
-    border: 1px solid rgba(197, 195, 195, 0.99);
+    border: 1px solid #91b3f1;
 
 }
 
 
 .content .search-item i {
     position: absolute;
-    top: 38%;
-    left: 2%;
-    color: #444444;
+    top: 35%;
+    right: 2%;
+}
+
+.content .search-item i:hover {
+    color: #91b3f1;
 }
 
 .content .show-item {
     overflow-y: scroll;
-    height: 55%;
+    height: 70%;
     background: conic-gradient(from -.5turn at bottom right, deeppink, cyan, rebeccapurple);
-    width: 88%;
+    width: 90%;
     padding: 1.5rem;
     border-radius: 3px;
     margin: auto;
 }
 
-.content .show-item .on {
+.content .show-item .list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    margin: 1rem auto;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.69);
+    flex-wrap: wrap;
+}
+
+.content .show-item .list .on {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    padding: 1rem;
-    margin: 1rem auto;
-    border-bottom: 1px solid lightgray;
+    padding: .6rem;
+    width: 70%;
 }
 
 .content .show-item .on h3 {
@@ -248,7 +269,7 @@ body{
 .contact {
     /*background: pink;*/
     width: 95%;
-    margin: 2rem auto;
+    margin: .5rem auto 1rem auto;
     padding: 1rem;
 }
 
@@ -362,4 +383,25 @@ a:visited {
         margin-bottom: 2rem;
     }
 
+    .content{
+        margin: 0;
+    }
+    .form button{
+        width: 50%;
+    }
+
+}
+
+@media (max-width: 540px) {
+    .content .search-item {
+        width: 95%;
+    }
+
+    .content .search-item i {
+        right: 5%;
+    }
+}
+
+#trash:hover{
+    color: #80a4e3;
 }
