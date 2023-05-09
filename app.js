@@ -12,16 +12,15 @@ const display = document.querySelector('.display');
         const div = document.createElement('div');
         div.className = "on";
         const header1 = document.createElement('h3');
-        header1.innerHTML = `TaskName:`${task.value};
+        header1.innerHTML = `<span style="color: #2d67b7">Task Name:</span> ${task.value}`;
         const header2 = document.createElement('h3');
-        header2.innerHTML = des.value;
+        header2.innerHTML = `<span style="color: #2d67b7">Description:</span> ${des.value}`;
         const header3 = document.createElement('h3');
         let newDate = new Date(date.value);
-        const dateTime = [newDate.getDate(),newDate.getMonth(),newDate.getFullYear()].join('-');
-        header3.innerHTML = dateTime;
+        header3.innerHTML = `<span style="color: #2d67b7">Date:</span> ${[newDate.getDate(), newDate.getMonth(), newDate.getFullYear()].join('-')}`;
         const header4 = document.createElement('h3');
-        const days = ["SUN","MON", "TUE", "WEN", "THU", "FRI", "SAT"];
-        header4.innerHTML = days[newDate.getDay()]
+        const days = ["SUN", "MON", "TUE", "WEN", "THU", "FRI", "SAT"];
+        header4.innerHTML = `<span style="color: #2d67b7; font-size: 1.1rem">Day:</span> ${days[newDate.getDay()]}`;
         div.appendChild(header1);
         div.appendChild(header2);
         div.appendChild(header3);
@@ -76,7 +75,7 @@ const display = document.querySelector('.display');
             let age = +item.getElementsByTagName('h3')[1].textContent;
             maximum.push(age);
         })
-        display.innerHTML = Math.max(...maximum);
+        display.innerHTML = `Maximum: ${Math.max(...maximum)}`;
     }
 
     const min = () => {
@@ -87,7 +86,7 @@ const display = document.querySelector('.display');
             minimum.push(age);
         })
         console.log(minimum)
-        display.innerHTML = Math.min(...minimum);
+        display.innerHTML = `Minimum: ${Math.min(...minimum)}`;
     }
 
     const average = () => {
@@ -100,7 +99,7 @@ const display = document.querySelector('.display');
         })
         let avg = sum / count;
         if (!isNaN(avg)) {
-            display.innerHTML = Math.floor(avg);
+            display.innerHTML = `Average: ${Math.floor(avg)}`;
         }
     }
 
