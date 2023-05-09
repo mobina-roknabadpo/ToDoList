@@ -12,16 +12,20 @@ const display = document.querySelector('.display');
         const div = document.createElement('div');
         div.className = "on";
         const header1 = document.createElement('h3');
-        header1.innerHTML = task.value;
+        header1.innerHTML = `TaskName:`${task.value};
         const header2 = document.createElement('h3');
         header2.innerHTML = des.value;
         const header3 = document.createElement('h3');
-        header3.innerHTML = date.value;
-        let date = new Date($('#date').val());
-        console.log(date.value)
+        let newDate = new Date(date.value);
+        const dateTime = [newDate.getDate(),newDate.getMonth(),newDate.getFullYear()].join('-');
+        header3.innerHTML = dateTime;
+        const header4 = document.createElement('h3');
+        const days = ["SUN","MON", "TUE", "WEN", "THU", "FRI", "SAT"];
+        header4.innerHTML = days[newDate.getDay()]
         div.appendChild(header1);
         div.appendChild(header2);
-        div.appendChild(header3)
+        div.appendChild(header3);
+        div.appendChild(header4);
         showItem.appendChild(div);
         //after add tp do list empty fields
         task.value = "";
