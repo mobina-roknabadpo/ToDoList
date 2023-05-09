@@ -198,7 +198,8 @@
 
 .content .show-item .on {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     padding: 1rem;
     margin: 1rem auto;
