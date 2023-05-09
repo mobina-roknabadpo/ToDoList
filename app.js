@@ -4,7 +4,6 @@ const date = document.getElementById('date');
 let input = document.getElementById('search');
 const showItem = document.querySelector('.show-item');
 const submit = document.getElementById('form');
-const display = document.querySelector('.display');
 (function () {
     submit.addEventListener('submit', (e) => {
         e.preventDefault();
