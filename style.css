@@ -10,7 +10,7 @@
 }
 
 body {
-    cursor: url(images/cursor.jpg) 0 0, pointer !important;
+    cursor:pointer;
 }
 
 .main {
@@ -253,7 +253,6 @@ input:focus {
     border: 1px solid lightgray;
     border-radius: 3px;
     padding: .7rem;
-    cursor: url("images/cursor.jpg"), pointer !important;
     font-weight: 600;
     font-size: .9rem;
     transition: all 1s ease-in-out;
