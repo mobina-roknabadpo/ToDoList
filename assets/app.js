@@ -39,7 +39,7 @@ const submit = document.getElementById('form');
         if (e.key === "Enter") {
             const div = showItem.querySelectorAll('div');
             div.forEach((item) => {
-                let match = item.getElementsByTagName('h3')[0];
+                let match = item.firstChild;
                 console.log(match)
                 if (match) {
                     let value = match.textContent || match.innerHTML;
