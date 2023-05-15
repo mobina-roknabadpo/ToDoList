@@ -54,52 +54,6 @@ const submit = document.getElementById('form');
         }
     })
 
-
-    // const max = () => {
-    //     const maximum = [];
-    //     const div = showItem.querySelectorAll('div');
-    //     div.forEach(item => {
-    //         let age = +item.getElementsByTagName('h3')[1].textContent;
-    //         maximum.push(age);
-    //     })
-    //     display.innerHTML = `Maximum: ${Math.max(...maximum)}`;
-    // }
-    //
-    // const min = () => {
-    //     const minimum = [];
-    //     const div = showItem.querySelectorAll('div');
-    //     div.forEach(item => {
-    //         let age = +item.getElementsByTagName('h3')[1].textContent;
-    //         minimum.push(age);
-    //     })
-    //     console.log(minimum)
-    //     display.innerHTML = `Minimum: ${Math.min(...minimum)}`;
-    // }
-    //
-    // const average = () => {
-    //     let count = 0;
-    //     let sum = 0;
-    //     const div = showItem.querySelectorAll('div');
-    //     div.forEach(item => {
-    //         sum += +item.getElementsByTagName('h3')[1].textContent;
-    //         count++;
-    //     })
-    //     let avg = sum / count;
-    //     if (!isNaN(avg)) {
-    //         display.innerHTML = `Average: ${Math.floor(avg)}`;
-    //     }
-    // }
-    //
-    // const sort = () => {
-    //     const div = showItem.querySelectorAll('div');
-    //
-    // }
-    //
-    // const clear = () => {
-    //     showItem.innerHTML = "";
-    //     display.innerHTML = "";
-    // }
-
     const hamburger = document.querySelector('.hamburger');
     const sidebar = document.querySelector('.sidebar');
     hamburger.addEventListener('click', () => {
